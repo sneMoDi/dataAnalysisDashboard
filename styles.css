@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Stylish font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff2df;
+    color: black; /* Text remains black in all modes */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode {
+    background-color: #fff2df; /* Light background */
+    color: black; /* Keep all text black */
+}
+
+.dark-mode {
+    background-color: #674d3c; /* Dark background */
+    color: black; /* Keep all text black */
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar-bg);
+    color: black; /* Text remains black */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode .navbar {
+    --navbar-bg: #d9ad7c;
+}
+
+.dark-mode .navbar {
+    --navbar-bg: #a2836e;
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--hero-bg);
+    color: black; /* Text remains black */
+    text-align: center;
+    padding: 5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    transition: background 0.5s ease, transform 0.5s ease;
+}
+
+.hero-section:hover {
+    transform: translateY(-10px);
+}
+
+.light-mode .hero-section {
+    --hero-bg: linear-gradient(to right, #d9ad7c, #fff2df);
+}
+
+.dark-mode .hero-section {
+    --hero-bg: linear-gradient(to right, #a2836e, #674d3c);
+}
+
+/* Buttons */
+button {
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button.btn-danger {
+    background-color: #e63946; /* Red for "Try Visualize" button */
+    color: white;
+}
+
+button.btn-danger:hover {
+    background-color: #d62828;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+button.btn {
+    background-color: #d9ad7c; /* Default for other buttons */
+    color: black;
+}
+
+button.btn:hover {
+    background-color: #a2836e;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: black; /* Text remains black */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.light-mode footer {
+    --footer-bg: #d9ad7c;
+}
+
+.dark-mode footer {
+    --footer-bg: #674d3c;
+}
+
+/* Upload and Form Sections */
+#uploadSection,
+#analyzeSection,
+#visualization,
+#predictSection {
+    background: var(--section-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.light-mode #uploadSection,
+.light-mode #analyzeSection,
+.light-mode #visualization,
+.light-mode #predictSection {
+    --section-bg: #fff2df;
+}
+
+.dark-mode #uploadSection,
+.dark-mode #analyzeSection,
+.dark-mode #visualization,
+.dark-mode #predictSection {
+    --section-bg: #a2836e;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 20px;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(20deg);
+}
+
+/* Stylish Dialogue Box */
+.speech-bubble {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff2df;
+    border: 2px solid #d9ad7c;
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: black; /* Text remains black */
+    text-align: center;
+    z-index: 10;
+    font-weight: 500; /* Slightly bold */
+    font-size: 1rem; /* Adjusted font size */
+}
+
+.speech-bubble.visible {
+    display: block; /* Show when triggered */
+}
+
+/* File Input Adjustments */
+#fileInput {
+    width: 250px; /* Reduced width */
+    margin-right: 10px; /* Spacing between input and button */
+    padding: 5px;
+    border: 1px solid #d9ad7c;
+    border-radius: 5px;
+    background-color: #fff2df;
+    color: black;
+    font-size: 14px;
+}
+
+#fileInput:hover {
+    border-color: #a2836e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
