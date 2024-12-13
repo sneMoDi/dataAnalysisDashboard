@@ -125,7 +125,6 @@ Contributions are welcome! To contribute:
 ## Contact
 
 For any questions or feedback, feel free to reach out:
-- **Email**: your_email@example.com
 - **GitHub**: [sneMoDi](https://github.com/sneMoDi)
 
 ---
